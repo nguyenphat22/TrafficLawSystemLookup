@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Tra cứu Luật Giao thông AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-banner">
+            <div class="container">
+                <img src="./src/assets/picture1.png" alt="Banner Trường" class="banner-img">
+            </div>
+        </div>
+        
+        <div class="main-blue-bar">
+            <div class="container nav-search-flex">
+                <nav class="main-nav">
+                    <ul>
+                        <li class="active"><a href="#">TRANG CHỦ</a></li>
+                        <li class="dropdown">
+                            <a href="#">CÁC BỘ LUẬT  <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="comingSoon('Bộ luật Dân sự')">Luật Dân sự</a>
+                                <a href="#" onclick="comingSoon('Bộ luật Hình sự')">Luật Hình sự</a>
+                                <a href="#" onclick="comingSoon('Luật Đất đai')">Luật Đất đai</a>
+                                <a href="#" onclick="comingSoon('Luật Hôn nhân gia đình')">Luật Hôn nhân gia đình</a>
+                            </div>
+                        </li>
+                        <!-- <li><a href="#" onclick="comingSoon('Trợ giúp')">TRỢ GIÚP</a></li> -->
+                    </ul>
+                </nav>
+                <div class="search-wrapper">
+                    <input type="text" id="userInput" placeholder="Tra cứu các quy định">
+                    <button onclick="handleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container content-section">
+        <div class="view-control">
+            <button class="tab-btn active" id="btnText" onclick="showView('text')">KẾT QUẢ AI</button>
+            <button class="tab-btn" id="btnPDF" onclick="showView('pdf')">FILE VĂN BẢN GỐC</button>
+        </div>
+
+        <div class="display-box">
+            <div id="textView" class="view-content">
+                <div class="ai-header">
+                    <i class="fa-solid fa-robot"></i> TRỢ LÝ AI PHÁP LUẬT
+                </div>
+                <div id="searchResult" class="text-data">
+                    Hệ thống đã sẵn sàng. Vui lòng nhập từ khóa để tra cứu nội dung trong <b>Nghị định 168/2024/NĐ-CP</b>.
+                </div>
+            </div>
+
+            <div id="pdfView" class="view-content" style="display: none;">
+                <iframe src="./src/assets/168_2024_NĐ-CP_26122024.pdf" width="100%" height="750px" style="border: none;"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
