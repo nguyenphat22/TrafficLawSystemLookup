@@ -33,7 +33,7 @@
                     </ul>
                 </nav>
                 <div class="search-wrapper">
-                    <input type="text" id="userInput" placeholder="Tra cứu các quy định">
+                    <input type="text" id="userInput" placeholder="Tra cứu các quy định" onkeypress="handleHeaderKeyPress(event)">
                     <button onclick="handleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
@@ -51,8 +51,21 @@
                 <div class="ai-header">
                     <i class="fa-solid fa-robot"></i> TRỢ LÝ AI PHÁP LUẬT
                 </div>
-                <div id="searchResult" class="text-data">
-                    Hệ thống đã sẵn sàng. Vui lòng nhập từ khóa để tra cứu nội dung trong <b>Nghị định 168/2024/NĐ-CP</b>.
+                
+                <div class="chat-container">
+                    <div id="chatHistory" class="chat-history">
+                        <div class="chat-message bot">
+                            <div class="message-avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div class="message-content">
+                                Hệ thống đã sẵn sàng. Vui lòng nhập từ khóa hoặc câu hỏi để tra cứu nội dung trong <b>Nghị định 168/2024/NĐ-CP</b>.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="chatInput" placeholder="Nhập câu hỏi của bạn ở đây..." onkeypress="handleChatKeyPress(event)">
+                        <button onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i> Gửi</button>
+                    </div>
                 </div>
             </div>
 

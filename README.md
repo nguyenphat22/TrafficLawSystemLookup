@@ -1,19 +1,84 @@
-# React + Vite
+# Traffic Law System Lookup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hệ thống Tra cứu Luật Giao thông với giao diện Frontend (React/Vite) và Backend API (Python/FastAPI).
 
-Currently, two official plugins are available:
+## Yêu cầu hệ thống (Prerequisites)
+- **Node.js** (Khuyên dùng phiên bản 18 trở lên)
+- **Python** (Khuyên dùng phiên bản 3.9 trở lên)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Hướng dẫn cài đặt (Setup) & Chạy ứng dụng (Run)
 
-## React Compiler
+### 1. Clone dự án
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Mở terminal và chạy lệnh sau để tải dự án về máy:
 
-Note: This will impact Vite dev & build performances.
+```bash
+git clone <repository_url>
+cd TrafficLawSystemLookup
+```
+*(Lưu ý: Thay `<repository_url>` bằng đường dẫn Git thực tế của dự án)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# TrafficLawSystemLookup
+### 2. Thiết lập & Chạy Backend (FastAPI)
+
+Backend sử dụng Python và FastAPI.
+
+**Bước 1:** Di chuyển vào thư mục backend:
+```bash
+cd backend
+```
+
+**Bước 2:** Tạo môi trường ảo (Virtual Environment):
+```bash
+python -m venv venv
+```
+
+**Bước 3:** Kích hoạt môi trường ảo:
+- Trên **macOS/Linux**:
+  ```bash
+  source venv/bin/activate
+  ```
+- Trên **Windows**:
+  ```bash
+  .\venv\Scripts\activate
+  ```
+
+**Bước 4:** Cài đặt các thư viện phụ thuộc:
+```bash
+pip install -r requirements.txt
+```
+
+**Bước 5:** Khởi động server Backend:
+```bash
+uvicorn api:app --reload
+```
+Server Backend sẽ chạy tại địa chỉ: **http://127.0.0.1:8000**
+
+---
+
+### 3. Thiết lập & Chạy Frontend (React + Vite)
+
+Frontend sử dụng React và Vite.
+
+**Bước 1:** Mở một cửa sổ Terminal mới (để giữ cho backend vẫn đang chạy) và di chuyển vào thư mục frontend từ thư mục gốc của dự án:
+```bash
+cd frontend
+```
+
+**Bước 2:** Cài đặt các packages/thư viện:
+```bash
+npm install
+```
+
+**Bước 3:** Khởi động server Frontend:
+```bash
+npm run dev
+```
+Giao diện Frontend sẽ chạy tại địa chỉ: **http://localhost:5173** (Hoặc port được Vite cấp trong terminal).
+
+---
+
+## Lưu ý
+- Hãy luôn đảm bảo rằng **Backend** đã được bật và đang chạy ở chế độ background trước khi thực hiện tra cứu trên **Frontend** để tránh các lỗi kết nối (Network Error).
+
