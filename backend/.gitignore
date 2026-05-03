@@ -53,18 +53,6 @@ Thumbs.db
 huggingface/
 hf_cache/
 
-# ==============================
-# ChromaDB (vector DB)
-# ==============================
-chroma_db/
-*.sqlite3
-
-# ==============================
-# Data files
-# ==============================
-*.csv
-*.xlsx
-*.json
 
 # 👉 nếu bạn muốn giữ mapping.csv thì bỏ dòng trên và thêm:
 # !mapping.csv
