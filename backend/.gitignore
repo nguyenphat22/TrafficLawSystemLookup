@@ -5,23 +5,26 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# ==============================
 # Virtual Environment
-# ==============================
 venv/
 .env/
 .venv/
 
-# ==============================
 # Environment Variables
-# ==============================
 .env
 .env.*
 
-# ==============================
 # Logs
-# ==============================
 *.log
+
+# ==============================
+# Node.js
+# ==============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # ==============================
 # OS files
@@ -30,45 +33,40 @@ venv/
 Thumbs.db
 
 # ==============================
-# VSCode / IDE
+# IDE
 # ==============================
 .vscode/
 .idea/
 
 # ==============================
-# Jupyter Notebook
+# Jupyter
 # ==============================
 .ipynb_checkpoints/
 
 # ==============================
-# PyTorch / HuggingFace Models
+# Models (nặng)
 # ==============================
 *.bin
 *.pt
 *.pth
 *.safetensors
 
-# cache HF (rất nặng)
 .cache/
 huggingface/
 hf_cache/
-
-
-# 👉 nếu bạn muốn giữ mapping.csv thì bỏ dòng trên và thêm:
-# !mapping.csv
-
-# ==============================
-# Upload / temp
-# ==============================
-uploads/
-tmp/
-temp/
 
 # ==============================
 # Build
 # ==============================
 dist/
 build/
+
+# ==============================
+# Temp
+# ==============================
+uploads/
+tmp/
+temp/
 
 # ==============================
 # Mac/Linux
