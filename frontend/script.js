@@ -1,6 +1,11 @@
 function showView(type) {
     document.getElementById('textView').style.display = (type === 'text') ? 'block' : 'none';
     document.getElementById('pdfView').style.display = (type === 'pdf') ? 'block' : 'none';
+
+    const lawPdfView = document.getElementById('lawPdfView');
+    if (lawPdfView) {
+        lawPdfView.style.display = 'none';
+    }
     
     document.getElementById('btnText').classList.toggle('active', type === 'text');
     document.getElementById('btnPDF').classList.toggle('active', type === 'pdf');
@@ -142,4 +147,34 @@ function formatText(text) {
 
 function comingSoon(name) {
     alert("Chức năng '" + name + "' đang được phát triển.");
+}
+function openLawPDF(title, pdfPath) {
+  const lawPdfFrame = document.getElementById("lawPdfFrame");
+  const lawPdfTitle = document.getElementById("lawPdfTitle");
+
+  if (lawPdfFrame) {
+    lawPdfFrame.src = pdfPath;
+  }
+
+  if (lawPdfTitle) {
+    lawPdfTitle.textContent = title;
+  }
+
+  showLawPdfView();
+}
+function showLawPdfView() {
+  const views = document.querySelectorAll(".view-content");
+
+  views.forEach(function(view) {
+    view.style.display = "none";
+  });
+
+  const lawPdfView = document.getElementById("lawPdfView");
+
+  if (lawPdfView) {
+    lawPdfView.style.display = "block";
+  }
+
+  document.getElementById("btnText").classList.remove("active");
+  document.getElementById("btnPDF").classList.add("active");
 }

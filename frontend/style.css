@@ -202,3 +202,21 @@ body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
     0%, 80%, 100% { transform: scale(0); }
     40% { transform: scale(1); }
 }
+.law-pdf-header {
+  padding: 16px 20px;
+  background: #f5f8ff;
+  border-bottom: 1px solid #d9e2f3;
+}
+
+.law-pdf-header h3 {
+  margin: 0;
+  color: #0b4ea2;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.law-pdf-header p {
+  margin: 6px 0 0;
+  color: #666;
+  font-size: 14px;
+}

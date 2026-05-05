@@ -23,10 +23,10 @@
                         <li class="dropdown">
                             <a href="#">CÁC BỘ LUẬT  <i class="fa-solid fa-chevron-down"></i></a>
                             <div class="dropdown-content">
-                                <a href="#" onclick="comingSoon('Bộ luật Dân sự')">Luật Dân sự</a>
-                                <a href="#" onclick="comingSoon('Bộ luật Hình sự')">Luật Hình sự</a>
-                                <a href="#" onclick="comingSoon('Luật Đất đai')">Luật Đất đai</a>
-                                <a href="#" onclick="comingSoon('Luật Hôn nhân gia đình')">Luật Hôn nhân gia đình</a>
+                                <a href="#" onclick="openLawPDF('Bộ luật Dân sự', './src/assets/91_2015_QH13.pdf')">Luật Dân sự</a>
+                                <a href="#" onclick="openLawPDF('Bộ luật Hình sự', './src/assets/135_VBHN-VPQH.pdf')">Luật Hình sự</a>
+                                <a href="#" onclick="openLawPDF('Luật Đất đai', './src/assets/31_2024_QH15.pdf')">Luật Đất đai</a>
+                                <a href="#" onclick="openLawPDF('Luật Hôn nhân gia đình', './src/assets/121-vbhn-vpqh.pdf')">Luật Hôn nhân gia đình</a>
                             </div>
                         </li>
                         <!-- <li><a href="#" onclick="comingSoon('Trợ giúp')">TRỢ GIÚP</a></li> -->
@@ -71,6 +71,20 @@
 
             <div id="pdfView" class="view-content" style="display: none;">
                 <iframe src="./src/assets/168_2024_NĐ-CP_26122024.pdf" width="100%" height="750px" style="border: none;"></iframe>
+            </div>
+            <div id="lawPdfView" class="view-content" style="display: none;">
+                <div class="law-pdf-header">
+                    <h3 id="lawPdfTitle">Văn bản pháp luật</h3>
+                    <p>Đang xem file PDF của bộ luật đã chọn</p>
+                </div>
+
+                <iframe
+                    id="lawPdfFrame"
+                    src=""
+                    width="100%"
+                    height="750px"
+                    style="border: none;">
+                </iframe>
             </div>
         </div>
     </main>
